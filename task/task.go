@@ -10,9 +10,15 @@ type Task struct {
 	UpdatedAt   time.Time
 }
 
+const (
+	Todo       = "todo"
+	InProgress = "in-progress"
+	Done       = "done"
+)
+
 func NewTask(description string) *Task {
 	return &Task{
 		Description: description,
-		Status:      TODO,
+		Status:      Todo,
 	}
 }
